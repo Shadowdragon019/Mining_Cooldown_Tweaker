@@ -132,6 +132,7 @@ dependencies {
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.19.2-43.3.2'
 
+    // Mixin AP
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
@@ -148,8 +149,9 @@ dependencies {
 }
 
 mixin {
-    add sourceSets.main, 'mixins.mining_cooldown_tweaker.refmap.json'
+    add sourceSets.main, 'mining_cooldown_tweaker.refmap.json'
     config 'mining_cooldown_tweaker.mixin.json'
+
     debug.verbose = true
     debug.export = true
 }
